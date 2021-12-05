@@ -4,5 +4,3 @@ import Routes from "./Routes";
 
 ReactDOM.render(<Routes />, document.getElementById("root"));
 
-
-// How this styles.css is included in our project 

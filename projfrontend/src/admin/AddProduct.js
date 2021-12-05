@@ -57,7 +57,7 @@ function CreateProduct() {
   const handleChange = (x) => (event) => {
     const values = x === "image" ? event.target.files[0] : event.target.value;
     console.log(`${x} is ${values}`);
-    formData.set(x, values); //can also be written as productData.formData; // state should not be manipulated directly, must have used setState // just following the course
+    formData.set(x, values); //can also be written as productData.formData // state should not be manipulated directly, must have used setState 
     setProductData((productData) => ({ ...productData, [x]: values })); // [x] is a way of writing property of object where [x] is a "x",
   };
 

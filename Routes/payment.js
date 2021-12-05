@@ -3,7 +3,7 @@ const router = express.Router();
 const sign = require("../Controllers/sign");
 
 const stripe = require("stripe")(
-  "sk_test_51JxcamSCacZxdBMWsfPfvNHbbj5PoK8nkOZ1AE6RzZSNZbdOV5BzcQv83zoXSbugwY5zPmALzU9lK1L8xqiHBBzL00CeEpqHCj"
+  "#######" // private key here 
 );
 
 router.post(
@@ -14,6 +14,9 @@ router.post(
     const total = req.body.amount;
 
     // Create a PaymentIntent with the order amount and currency
+    // Name address description are required for international payments 
+    // right now it is hard coded but it can be easily taken from the paymentIntent form 
+    
     stripe.paymentIntents
       .create({
         description: "Software development services",

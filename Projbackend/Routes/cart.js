@@ -12,8 +12,6 @@ router.param("userId",user.getUserById);
 router.param("orderId",cart.getOrderById);
 
 // create cart
-// middlewares will be cleared by the frontend, the logic is if the createOrder get fails then the data will be,
-// saved in the req.body( SEE MIDDLEWARES FOR INSIGHTS) so that necessary action can be taken 
 
 router.post("/orders/create/:userId",
 sign.signInCheck,

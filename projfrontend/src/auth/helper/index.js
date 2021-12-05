@@ -6,7 +6,7 @@ export const signup = (user) => {
     method: "POST",
     headers: {
       "Content-type": "application/json",
-      Accept: "application/json", //Kuch toh rehesya hai daya
+      Accept: "application/json", 
     },
     body: JSON.stringify(user),
   }).then((response) => response.json());
@@ -17,7 +17,7 @@ export const signin = (data) => {
   return fetch(`${CONN}signin`, {
     method: "POST",
     headers: {
-      "Content-Type": "application/json", //Kuch toh rehesya hai daya
+      "Content-Type": "application/json", 
       Accept: "application/json",
     },
     body: JSON.stringify(data),

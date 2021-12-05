@@ -54,7 +54,7 @@ function UpdateProduct(props) {
     event.preventDefault();
     const newValue = event.target.value;
     const x = event.target.name;
-    values.finalData.set(x, newValue); // there is need to be worked on this, this way is inappropriate, therefore it breaks the law of source of truth, and controlled components
+    values.finalData.set(x, newValue); // there is need to worked on this, this way is inappropriate, therefore it breaks the law of source of truth, and controlled components
     setValues((prev) => ({ ...prev, [x]: newValue }));
   };
 

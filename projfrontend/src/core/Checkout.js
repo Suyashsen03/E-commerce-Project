@@ -11,7 +11,7 @@ import {
 } from "./helper/cartHelperCalls";
 
 const stripePromise = loadStripe(
-  "pk_test_51JxcamSCacZxdBMWISsnsN4czwQjpY3XsDyTY1eie4Mm0cpi2Xb1MwypXxk6XUTyZwk5bpBH9M0NEZuK3laNxh7U00OGLHtQUb"
+  "####" // secret public key
 );
 
 const Checkout = () => {
@@ -25,26 +25,7 @@ const Checkout = () => {
 
   useEffect(getPaymentIntent, []);
 
-  // calculating the total price
-  // An assignment operator assigns a value to its left operand based on the value of its right operand.
-  // const calculatingTotalPrice = () => {
-  //   let amount = 0;
-  //   console.log(data);
-  //    return data&&data.map((element) => {
-  //     amount = amount + element.price;
-  //     setTotalPrice((prev)=>({...prev,price:amount}));
-  //   });
-
-  //   //return <h3>Total Amount is ${amount}</h3>;
-  // };
-
-  // const showPaymentButton = () => {
-  //   return isAuthenticated() ? (
-  //     <button>Pay</button>
-  //   ) : (
-  //     <Link to="/signin">Signin</Link>
-  //   );
-  // };
+  
   const appearance = {
     theme: "stripe",
   };
@@ -59,16 +40,8 @@ const Checkout = () => {
   return (
     <div>
       <h2>Hello This is a checkout page</h2>
-      {/*       
-      {calculatingTotalPrice()}
-       */}
       
-      {totalPrice}
-      {/*       
-      {showPaymentButton()}
-
-       */}
-
+  
       {clientSecret && (
         <Elements options={options} stripe={stripePromise}>
           <CheckoutForm />

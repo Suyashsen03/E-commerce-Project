@@ -55,8 +55,8 @@ module.exports.userPurchaseList = function (req, res) {
         .exec((err, result) => {
             if (err) {
                 console.log(err);
-                return res.json({ message: "No such user found " }) // Investigation required, clear it by 10 AUG 
-                                                                     // or by completion of 13 module
+                return res.json({ message: "No such user found " }) // Investigation required,  
+                                                                     
             } else {
                 console.log(result)
                 return res.json(result);
@@ -71,13 +71,13 @@ module.exports.userPurchaseList = function (req, res) {
 module.exports.pushOrderPurchaseList = function (req, res, next) {
 
     let purchases = [];
-    // coming from frontend                                   // Investigation required, clear it by 10 AUG
-    req.body.purchaseCart.orders.forEach(product => {              // or by completion of 13 module
+    // coming from frontend                                   // Investigation required
+    req.body.purchaseCart.orders.forEach(product => {              
         purchases.push({                                         //(ORDER.PRODUCTS) WILL GET CLEAR DURING FRONTEND
                                                                 // replacement of (purchaseCart.orders)
             _id: product._id,
             description: product.description,
-            quantity: product.quantity, // Investigation required, clear it by 10 AUG, or by completion of 13 module
+            quantity: product.quantity, // Investigation required 
             amount: req.body.order.amount,
             transaction_id: req.body.order.transaction_id
         })

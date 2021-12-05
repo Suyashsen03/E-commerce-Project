@@ -1,0 +1,1 @@
+ export const CONN=process.env.REACT_APP_BACKEND;

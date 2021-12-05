@@ -46,19 +46,19 @@ export const createProduct = (data) => {
   return fetch(`${CONN}product/createProduct/${jwt._id}`, {
     method: "POST",
     headers: {
-      Accept: "application/json", // why did'nt used content type multipart form data
+      Accept: "application/json", 
       Authorization: `Bearer ${jwt.token}`,
     },
     body: data,
     credentials: "same-origin",
-  }).then((response) => response.json()); // aage ki karwaayi exported jagah par
+  }).then((response) => response.json()); 
 };
 
 // Read all products
 export const getAllProducts = () => {
   return fetch(`${CONN}products/getAllProducts`, {
     method: "GET",
-  }).then((response) => response.json()); // aage ki karwaayi exported jagah par
+  }).then((response) => response.json()); 
 };
 
 // delete product
@@ -67,7 +67,7 @@ export const deleteProduct = (id) => {
   return fetch(`${CONN}products/${id}/${jwt._id}/delete`, {
     method: "DELETE",
     headers: {
-      Accept: "application/json", // why did'nt used content type multipart form data
+      Accept: "application/json", 
       Authorization: `Bearer ${jwt.token}`,
     },
   }).then((response) => response.json()); 
@@ -90,7 +90,7 @@ export const updateProduct = (data,productId) => {
   return fetch(`${CONN}products/${productId}/${jwt._id}/update`, {
     method: "PUT",
     headers: {
-      Accept: "application/json", // why did'nt used content type multipart form data
+      Accept: "application/json", 
       Authorization: `Bearer ${jwt.token}`,
     },
     body: data,

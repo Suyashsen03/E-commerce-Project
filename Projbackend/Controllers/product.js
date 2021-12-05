@@ -177,7 +177,7 @@ module.exports.getAllUniqueCategories = (req, res) => {  // this is optional, wa
 
 module.exports.updateStock = (req, res, next) => {
     let myOperations = req.body.purchaseCart.orders.map(elem => {
-        return {                                              // our model is named with cart, test it while frontend
+        return {                                              // our model is named with cart
             updateOne: {
                 filter: { _id: elem._id },
                 update: { $inc: { stock: -elem.count, itemSold: +elem.count } }

@@ -1,1 +1,1 @@
-Tshirt Store Project
+E-commerce store 

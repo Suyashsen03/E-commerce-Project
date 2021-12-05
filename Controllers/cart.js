@@ -58,8 +58,8 @@ module.exports.updateOrderStatus=(req,res)=>{
 }
 
 module.exports.allOrderStatus=(req,res)=>{
-PurchaseCart.find({},"status",(err,natija)=>{  // Kindly verify this during testing therefore 
-    if(err){                                   // Hitesh se alag method lagayi hai humne 
+PurchaseCart.find({},"status",(err,natija)=>{  // Kindly verify this during testing  
+    if(err){                                    
         return res.status(400).json({"err":"cannot find status in  db"});
     };
     return res.json({"natija":natija});

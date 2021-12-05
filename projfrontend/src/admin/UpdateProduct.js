@@ -133,7 +133,7 @@ function UpdateProduct(props) {
           value={values.category}
         >
           <option>Select</option>
-          {values.categories && // why categories is used here
+          {values.categories && 
             values.categories.map((cate, index) => (
               <option key={index} value={cate._id}>
                 {cate.category}
